@@ -46,5 +46,9 @@ end
 def turn_count
   @board.reject{|space| space == " "}.length
 end
+
+def current_player
+  turn_count % 2 == 1 ? "O" : "X"
+end
   
 end
