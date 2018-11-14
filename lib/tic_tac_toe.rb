@@ -6,6 +6,18 @@ class TicTacToe
     @board = [" "," "," "," "," "," "," "," "," "]
   end
   
+  def play
+  until over?
+    turn
+  end
+  
+  if won?
+    puts "Congratulations #{winner}!"
+  else 
+    puts "Cat's Game!"
+  end
+end
+  
   def display_board
   puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
   puts "-----------"
